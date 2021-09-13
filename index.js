@@ -4,11 +4,13 @@ const config = require('./config.json')
 
 client.on('ready', async () => {
   setInterval(() => {
+    
   let guild = client.guilds.cache.get(config.guild)
   
      if(!guild) return console.log('Guild introuvable')
     
-  let channel = guild.channels.cache.get(config.salon)
+  let channel = guild.channels.cache.get(config.SALON)
+  
      if(!channel) return console.log('Salon introuvable')
      if(channel) {  
        
